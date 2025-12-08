@@ -1,27 +1,29 @@
 <?php
-    class User {
+    class Usuario {
         private $id;
-        private $name;
+        private $nome;
         private $email;
-        private $password;
+        private $rm;
+        private $senha;
         private $post = [];
 
-        public function __construct($id, $name, $email, $password) {
+        public function __construct($id, $nome, $email, $rm, $senha) {
             $this->id = $id;
-            $this->name = $name;
+            $this->nome = $nome;
             $this->email = $email;
-            $this->password = $password;
+            $this->rm = $rm;
+            $this->senha = $senha;
         }
 
         public function getId() {
             return $this->id;
         }
 
-        public function getName() {
-            return $this->name;
+        public function getNome() {
+            return $this->nome;
         }
 
-        public function setName($name) {
+        public function setNome($nome) {
             return;
         }
 
@@ -33,11 +35,15 @@
             return;
         }
 
-        public function getPassword() {
-            return $this->password;
+        private function getRm($rm) {
+            return $this->rm;
         }
 
-        public function setPassword($password) {
+        public function getSenha() {
+            return $this->senha;
+        }
+
+        public function setSenha($senha) {
             return;
         }
 

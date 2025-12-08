@@ -14,7 +14,9 @@
     --color-amber-700: oklch(55.5% 0.163 48.998);
     --color-green-950: oklch(26.6% 0.065 152.934);
     --color-blue-950: oklch(28.2% 0.091 267.935);
+    --color-pink-300: oklch(82.3% 0.12 346.018);
     --color-pink-500: oklch(65.6% 0.241 354.308);
+    --color-pink-600: oklch(59.2% 0.249 0.584);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-xl: 1.25rem;
@@ -211,6 +213,15 @@
   .ml-6 {
     margin-left: calc(var(--spacing) * 6);
   }
+  .line-clamp-5 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
@@ -226,11 +237,11 @@
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
-  .h-96 {
-    height: calc(var(--spacing) * 96);
+  .h-93 {
+    height: calc(var(--spacing) * 93);
   }
-  .h-120 {
-    height: calc(var(--spacing) * 120);
+  .h-133 {
+    height: calc(var(--spacing) * 133);
   }
   .h-full {
     height: 100%;
@@ -293,6 +304,9 @@
   .border-amber-500 {
     border-color: var(--color-amber-500);
   }
+  .border-pink-500 {
+    border-color: var(--color-pink-500);
+  }
   .bg-amber-50 {
     background-color: var(--color-amber-50);
   }
@@ -304,6 +318,9 @@
   }
   .bg-green-950 {
     background-color: var(--color-green-950);
+  }
+  .bg-pink-300 {
+    background-color: var(--color-pink-300);
   }
   .bg-pink-500 {
     background-color: var(--color-pink-500);
@@ -332,6 +349,9 @@
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
+  .py-7 {
+    padding-block: calc(var(--spacing) * 7);
+  }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
   }
@@ -358,6 +378,22 @@
     --tw-shadow-color: oklch(76.9% 0.188 70.08);
     @supports (color: color-mix(in lab, red, red)) {
       --tw-shadow-color: color-mix(in oklab, var(--color-amber-500) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-pink-500 {
+    --tw-shadow-color: oklch(65.6% 0.241 354.308);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-pink-500) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .invalid\:border-pink-500 {
+    &:invalid {
+      border-color: var(--color-pink-500);
+    }
+  }
+  .invalid\:text-pink-600 {
+    &:invalid {
+      color: var(--color-pink-600);
     }
   }
   .focus\:ring-2 {

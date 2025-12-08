@@ -1,13 +1,12 @@
 <?php
-    require_once('./src/library/Post.php');
-    require_once('./src/library/User.php');
+    session_start();
+    $usuario = $_SESSION['usuario'];
 
-    $users = [
-        new User(1, 'Claudio', 'claudio@email.com', 'claudio123'),
-        new User(2, 'Rodrigo', 'rodrigo@email.com', 'rodrigo123')
-    ];
-    #$claudio = new User(1, 'Claudio', 'claudio@email.com', 'claudio123');
-    #$rodrigo = new User(2, 'Rodrigo', 'rodrigo@email.com', 'rodrigo123');
+    if(!isset($usuario)){
+        header('Location: login.php');
+    }
+
+    /*require_once('./src/library/Post.php');
 
     if(isset($_POST['sbmPost'])){
         if(empty($_POST['txtaPost'])){
@@ -21,7 +20,7 @@
         );
 
         header('Location: http://localhost/interdisciplinar/');
-    }
+    }*/
 
 ?>
 
@@ -32,7 +31,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Testes</title>
     <link href="./src/css/output.css" rel="stylesheet">
-    <script src="./src/scripts/index.js"></script>
+    <script src="./src/scripts/home.js"></script>
 </head>
 <body class="min-h-dvh m-0">
 	<header>
